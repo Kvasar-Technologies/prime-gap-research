@@ -71,10 +71,15 @@ tiene hoy una ruta publicada que produzca θ > 1/2 + 1/40 incondicionalmente sob
 
 ## (c) Técnicas matemáticamente incapaces de ayudar (y por qué)
 
-1. **«Mejorar» la cota de Weil `|S(m,n,p)| ≤ 2√p`. Imposible: es óptima.** Verificado
-   (arXiv:2309.08528): los ángulos de Kloosterman satisfacen
-   `S(1,n,p) = 2√p cos θ_p(n)` y son equidistribuidos según Sato–Tate (Katz). La
-   constante 2 es alcanzada infinitas veces. Cualquier plan que empiece por «mejorar Weil»
+1. **«Mejorar» la cota de Weil `|S(m,n,p)| ≤ 2√p`. Imposible: es óptima.**
+   **[NO VERIFICADO EN SESIÓN]** (afirmación estándar —Katz, *Gauss Sums, Kloosterman
+   Sums, and Monodromy Groups* (1988)— pero el chequeo web de `notas/52` muestra que la
+   fuente que citábamos, arXiv:2309.08528, **no** la respalda: ese paper solo prueba la
+   cota de Weil para sumas de Kloosterman de peso semientero; no menciona optimalidad,
+   Sato–Tate ni Katz. **No citar 2309.08528 para esto.**): los ángulos de Kloosterman
+   satisfacen `S(1,n,p) = 2√p cos θ_p(n)` y son equidistribuidos según Sato–Tate (Katz).
+   La constante 2 es alcanzada infinitas veces. Verificación numérica parcial nuestra:
+   `experimentos/kloosterman-weil.js` (0 violaciones en 4.344 sumas, razón máxima 0.9653). Cualquier plan que empiece por «mejorar Weil»
    está muerto antes de empezar. Lo único que se puede mejorar es el **promedio**
    (`X^{1/6+ε}` de Kuznetsov, conjeturalmente `X^ε`).
 2. **La RH sobre cuerpos finitos / la cota de Weil sobre F_q. No hay puente conocido a
