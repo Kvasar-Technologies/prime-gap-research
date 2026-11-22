@@ -1,0 +1,12 @@
+# Lean
+.lake/
+build/
+*.olean
+*.ilean
+*.c
+*.o
+# Node
+node_modules/
+package-lock.json
+# OS
+.DS_Store

@@ -1,0 +1,40 @@
+=== REGISTRO DE VERIFICACIÓN === Sun Nov 22 05:06:20 AM UTC 2026
+
+--- E1: cota de Weil (Kloosterman), p <= 37 ---
+Verificado sobre 12 primos p ∈ [3,37], 4344 sumas de Kloosterman (todas las clases).
+W1 (Gauss |G|²=p): violaciones = 0
+W3 (Weil |K| ≤ 2√p): violaciones = 0, razón máxima observada |K|/(2√p) = 0.9653
+
+--- E2: tuplas admisibles (DFS exhaustivo con poda) ---
+H(2) = 3  (tupla 0,2) [0ms]
+H(3) = 7  (tupla 0,2,6) [0ms]
+H(4) = 9  (tupla 0,2,6,8) [0ms]
+H(5) = 13  (tupla 0,2,6,8,12) [0ms]
+H(6) = 17  (tupla 0,4,6,10,12,16) [1ms]
+H(7) = 21  (tupla 0,2,6,8,12,18,20) [1ms]
+H(8) = 27  (tupla 0,2,6,8,12,18,20,26) [2ms]
+H(10) = 33  (tupla 0,2,6,8,12,18,20,26,30,32) [21ms]
+H(14) = 51  (tupla 0,2,6,8,12,18,20,26,30,32,36,42,48,50) [460ms]
+
+--- E3: M_k de Maynard (Rayleigh-Ritz, cotas inferiores) ---
+Valor exacto k=2:  M_2 = 1/(1-W(1/e)) = 1.385933276
+k=2:  D=2(n=6): 1.385653   D=3(n=10): 1.385909   D=4(n=15): 1.385931   D=5(n=21): 1.385933   D=6(n=28): 1.385933
+k=3:  D=2(n=10): 1.643881   D=3(n=20): 1.646031   D=4(n=35): 1.646365   D=5(n=56): 1.646427   D=6(n=84): 1.646438
+
+--- E4: ceros de zeta ---
+ζ(2) = 1.6449340668482266  exacto π²/6 = 1.6449340668482264
+γ_1 = 14.134725142  (tabla: 14.134725141734695)  err = 1.07e-14
+γ_2 = 21.022039639  (tabla: 21.022039638771755)  err = -2.03e-13
+γ_3 = 25.010857580  (tabla: 25.01085758014569)  err = -2.84e-14
+γ_4 = 30.424876126  (tabla: 30.424876125859512)  err = -7.11e-15
+γ_5 = 32.935061588  (tabla: 32.93506158773919)  err = -7.11e-15
+γ_6 = 37.586178159  (tabla: 37.58617815882567)  err = -7.11e-15
+γ_7 = 40.918719012  (tabla: 40.9187190121475)  err = 4.97e-14
+γ_8 = 43.327073281  (tabla: 43.327073280915)  err = 0.00e+0
+γ_9 = 48.005150881  (tabla: 48.00515088116716)  err = -7.11e-15
+γ_10 = 49.773832478  (tabla: 49.7738324776723)  err = 0.00e+0
+γ_11 = 52.970321478  (tabla: 52.970321477714776)  err = -3.13e-13
+γ_12 = 56.446247697  (tabla: 56.44624742579359)  err = 2.71e-7
+x=10000: ψ exacto=10013.4 predicción=10028.0 residuo=-14.58 (escala esperada ~√x/√T ≈ 13.0)
+x=100000: ψ exacto=100051.6 predicción=100052.1 residuo=-0.56 (escala esperada ~√x/√T ≈ 41.0)
+x=1000000: ψ exacto=999586.6 predicción=999816.3 residuo=-229.70 (escala esperada ~√x/√T ≈ 129.8)
