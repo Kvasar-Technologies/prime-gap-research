@@ -1,5 +1,7 @@
 # 01b — Constantes numéricas verificadas (Y. Zhang, "Bounded gaps between primes")
 
+*(versión detallada; sustituye al resumen corto que se conserva sólo en el entorno local)*
+
 Regla de este fichero: **sólo** constantes que he podido verificar. Cada línea lleva la fuente.
 Cualquier cantidad no verificada está marcada `[NO VERIFICADO]` y **no** aparece en las tablas.
 Convención de notación: uso la notación de Zhang (`k_0`, `l_0`, `δ`, `ν`, `Λ`) y, donde la
