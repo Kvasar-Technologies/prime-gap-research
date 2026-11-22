@@ -35,3 +35,14 @@ seguido bajando por optimización computacional del mismo marco, no por nueva
 teoría". **Esto refuerza la conclusión de `notas/20-arquitectura.md`**: el margen
 está en la *calibración numérica*, no en teoría nueva — y nuestra Fase 4
 (experimentación + formalización) encaja en esa dirección.
+
+## Fuente primaria del 212 (descargada durante la investigación, NO incluida en el repo público)
+
+*Charton, Hong, Lau, Ono, Rémy, Siu, Swaminathan, Thorner, Xie, **A new bound for small
+gaps between primes***, <https://primegaps.axiommath.ai/bgp212.pdf> (734 KB; depositado en
+el entorno de trabajo privado en `referencias/bgp212.pdf`, pero **no** redistribuido en el
+repositorio público por derechos de autor). La extracción de texto del PDF confirma la
+presencia del enunciado `H_1 ≲ 212` y su bibliografía incluye **Stadlmann:2026:BGP**
+(el trabajo primario que da 240).
+**Estado:** [VERIFICADO PARCIALMENTE] — PDF primario consultado con extracción de texto
+fragmentaria; se recomienda leer directamente el Teorema 1.1.
