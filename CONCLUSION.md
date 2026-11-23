@@ -34,21 +34,23 @@ distancias entre primos?
    `m ≳ C√(γ/T)` — verificado numéricamente (11 ceros reproducidos a ~1e-13,
    residuales dentro de la escala `√x/√T`).
 
-## El único resquicio con contenido nuevo
+## Sobre la línea «Siegel–Weil / problema del divisor» (corregido)
 
-La estimación Tipo III de Zhang es una **convolución deslizada de la función
-divisor**. Traducida a lenguaje theta, es el control del *error* en la identidad
-de **Siegel–Weil** para la forma descompuesta `xy`:
+Se había propuesto articular la estimación Tipo III de Zhang con la identidad de
+Siegel–Weil de la serie theta de la forma descompuesta `xy`. **Corrección honesta:**
 
-```
-Σ_{n≤M} τ(n) = #{(a,b) ∈ ℕ² : ab ≤ M}      (serie theta de xy; VERIFICADO EN LEAN)
-Σ_{n≤M} τ(n) = M log M + (2γ−1)M + O(M^{1/2})   (Voronoï; VERIFICADO numéricamente)
-```
+* la igualdad `Σ_{n≤M} τ(n) = M log M + (2γ−1)M + O(√M)` sale **ya del método de la
+  hipérbola de Dirichlet**; no hay contenido nuevo ahí;
+* lo conocido es mucho mejor: `O(M^{1/3})` (Kolesnik), con la conjetura del problema
+  del divisor en `M^{1/4+ε}`;
+* la estimación Tipo III de Zhang trata la convolución de τ **en progresiones
+  aritméticas** (módulos `q` lisos y libres de cuadrados), que es un objeto
+  distinto del error del promedio de τ; no es una «reformulación» de lo anterior.
 
-Ese residuo —que medimos acotado en escala √M hasta 10⁸— es *exactamente* lo que
-habría que mejorar, y la vía seria es `L(s, π, sym²)` (functorialidad simétrica),
-no la "theta lift" como identidad de promedios. **No hay teorema publicado que lo
-haga; queda como línea de trabajo.**
+**Conclusión revisada: esta línea tampoco constituye un resquicio documentado.**
+Queda como única vía *concebible* (sin teorema puente) la mejora de las
+estimaciones de Tipo I/II sobre ℚ vía teoría de representación (nivel de
+distribución automorfo), que es exactamente lo que dice la literatura estándar.
 
 ## Qué queda como entregable útil
 

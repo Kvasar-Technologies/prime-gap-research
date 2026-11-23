@@ -3,27 +3,36 @@
 Síntesis de `04-riemann-1859.md`, `05-theta-bridges.md`, `06-honest-assessment.md`,
 `10-cuellos-de-botella.md`, `03*-polymath8*.md`.
 
-## 1. El diagrama de dependencias (todo lo de abajo está verificado en las notas)
+## 1. El diagrama real de dependencias (corregido)
+
+**Corrección importante (Fase 2, auditoría `notas/60`).** La afirmación previa
+«las técnicas theta son el andamio del método» estaba **sobredimensionada**. Lo que
+usan Zhang (2014), Maynard (2015) y Polymath 8 (2014) es:
 
 ```
-                    ┌─────────────────────────────────────────────┐
-   theta ←──┐  Weyl rep. SL₂(F_p) → COTA DE WEIL 2√p (óptima)      │
-            │        ↓                                            │
-            │   Fórmula de traza de KUZNERSOV (Bessel + K-Sums)   │
-            │        ↓                                            │
-  H ≤ f(θ, k, M_k/I_k) ←── NIVEL DE DISTRIBUCIÓN θ  ←── Tipo I/II  │
-            │                  ↑                                   │
-            │                  └──── truco del divisor (r_Δ, d|n(n+2))
-            │                            ↓                         │
-            │                  Siegel–Weil / theta lifts (promedios)
-            └── Riemann 1859: ecuación funcional vía serie theta,
-                fórmula explícita (multiplicidad de ceros)
+  cotas de DELIGNE para sumas exponenciales (ℓ-ádicas; Weil 1948 es el caso
+     de las sumas de Kloosterman)  ─┐
+                                     ├──► estimaciones Tipo I/II ──► nivel de distribución θ ──► H
+  fórmula de traza de KUZNERSOV     ─┤        (Deshouillers–Iwaniec; GL₂, NO es la
+  en GL₂ (Petersson + Bessel)       ─┘         correspondencia theta)
 ```
 
-Consecuencia inmediata y honesta: **las técnicas theta ya están dentro del método**
-como *andamio* de las estimaciones Tipo I/II/III. El motor sigue siendo
-Bombieri–Vinogradov, y el techo actual (H₁ ≤ 246 incondicional; H₁ ≤ 6 bajo GEH)
-sale de θ ≈ 1/2 + 1/40 (8b) y del cuello variacional `M_k/I_k ≍ log k/k`.
+La **correspondencia theta** de Howe / los theta lifts de Kudla–Millson / la fórmula
+de Siegel–Weil aparecen en *otros* lugares de la teoría analítica de números
+(convoluciones deslizadas del divisor, promedios de coeficientes de series theta),
+pero **no** son el motor de las estimaciones Tipo I/II/III tal como se usan en
+Zhang/Maynard/Polymath. Lo correcto es:
+
+* el ingrediente exponencial es **Deligne** (la demostración de la cota de Weil para
+  Kloosterman clásicas suele hacerse hoy vía conteo de puntos y cohomología ℓ-ádica;
+  la vía histórica de Weil usaba una identidad «theta» sobre productos — ese es el
+  parentesco real, y es histórico, no operativo);
+* el ingrediente espectral es la **traza de Kuznetsov** en GL₂ con pesos de
+  Petersson (`h(t_j)/cosh πt_j`), no una fórmula de traza theta.
+
+Evidencia de que el método **ya consume** casi toda la teoría disponible: el techo
+alcanzado (`H₁ ≤ 246`; `H₁ ≤ 6` bajo GEH; récord 212) sale de θ ≈ 1/2 + 1/40 más el
+cuello variacional, no de una insuficiencia de teoría theta.
 
 ## 2. Los cuatro sitios donde un "mejoramiento" puede ocurrir
 

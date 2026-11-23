@@ -9,7 +9,11 @@ Convenciones:
 
 ---
 
-## P1 — Multiplicidad de ceros y fórmula explícita (linealidad)  [DEM] [LEAN] [NUM]
+## P1 — Multiplicidad de ceros y fórmula explícita (linealidad)  [T] [LEAN] [NUM]
+
+Nota de honestidad (auditoría): que los ceros de ζ sean **simples** es una
+**conjetura** (no un teorema); el argumento de «umbral de ruido» de P1b es una
+**heurística** derivada de las dos escalas, no una prueba.
 
 **Enunciado (Riemann, 1859).** Con ρ = 1/2 + iγ y multiplicidad m_γ ∈ ℕ,
 
@@ -21,7 +25,7 @@ Convenciones:
 con w ∈ ℕ^{(γ)}. Entonces S(x; w + δ_j) = S(x; w) + δ_j (x^{ρ_j}/ρ_j + conj).
 *Demostración:* linealidad de la suma finita. **[LEAN]** (ver `Lemas/Multiplicidad.lean`.)
 
-**Lema P1b (umbral de detección, nuevo, [PROP]→[DEM] del análisis de escalas).**
+**Lema P1b (umbral de detección; **heurística**, derivación de escalas propia [H]).**
 Sea σ_T = RMS de la cola omitida. Entonces σ_T ≈ C·x^{1/2}·T^{-1/2} (con logaritmos),
 y un cero de multiplicidad m contribuye m·x^{1/2}/√γ_j. Luego una multiplicidad m es
 *distinguible* del ruido sólo si
@@ -43,7 +47,7 @@ esperada √x/√T ≈ 13, 41, 130 ✓).
 
 ---
 
-## P2 — La identidad de la hipérbola como serie theta de la forma descompuesta  [NUM] [LEAN-parcial]
+## P2 — La identidad de la hipérbola como serie theta de la forma descompuesta  [T, formalizado]
 
 **Enunciado clásico (el "caso degenerado" de Siegel–Weil).** Para M ≥ 1,
 
@@ -56,12 +60,13 @@ La primera igualdad es, en lenguaje theta, el contaje de puntos de red de la
 viene dado por el coeficiente de la **serie de Eisenstein** (fórmula de
 Siegel–Weil) y la diferencia es una forma cuspiforme sobre SO(3).
 
-**Por qué importa aquí (Lema P2a, articulación del proyecto [PROP]).**
-La estimación Tipo III de Zhang/8a/8b (sumas `Σ_{d ≤ D} r_Δ(·)` con `d | n(n+2)`)
-es, traducida, el control del *término de error* de esa identidad en un intervalo
-corto y con condición de congruencia. La vía theta-lift pura **no** da cotas de
-error (son identidades de promedios), así que el contenido potencial está en la
-cota de error vía `L(s, π, sym²)`, no en la identidad. [NO cerrado]
+**Por qué NO importa aquí (Lema P2a; corrección de la auditoría `notas/60`).**
+Se había propuesto que la estimación Tipo III de Zhang/8a/8b (sumas
+`Σ_{d ≤ D} r_Δ(·)` con `d | n(n+2)`) es el control del error de esta identidad.
+**Corrección:** (i) el `O(√x)` sale ya del método de la hipérbola y lo conocido es
+`O(x^{1/3})`; (ii) el Tipo III de Zhang trata la convolución de τ **en progresiones
+aritméticas** (módulos lisos y libres de cuadrados), que no es el error del promedio
+de τ. **No hay articulación conocida**; no debe presentarse como vía de mejora.
 
 **Comprobación [NUM] [LEAN]:** `τ(100) = 482` y coincidencia exacta de ambos
 cómputos; ver `Lemas/Hiperbola.lean` (para x ≤ 100, `decide`); versión general
@@ -76,7 +81,7 @@ proyecto con contenido nuevo posible.
 
 ---
 
-## P3 — La cota de Weil es óptima: obstrucción verificada  [DEM] [NUM]
+## P3 — La cota de Weil es óptima: obstrucción (afirmación estándar, no reverificada)  [T no verificada en sesión]
 
 **Enunciado.** K(a,b;p) = Σ_{x mod p} e_p(ax + b x⁻¹) satisface `|K| ≤ 2·√(p/mcd(a,b))`
 (Weil 1948) y la constante es óptima: K(1,n;p) = 2√p·cos θ_p(n) con ángulos
