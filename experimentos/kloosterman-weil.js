@@ -1,11 +1,12 @@
-// kloosterman-weil.js
-// Verificación numérica de los hechos que, vía la representación de Weil /
-// fórmula theta, producen la cota de Weil para sumas de Kloosterman:
-//   (W1) Gauss:        G_1(a;p) = Σ_x e_p(a x^2) = χ(a) G_1,   |G_1|² = p
-//   (W2) Forma binaria no degenerada: Σ_{x,y} e_p(Q(x,y)) = ε(disc)·G_1·G_1 /G... 
-//        (aquí comprobamos el caso anisótropo/dégenéré por conteo exacto con BigInt)
-//   (W3) Weil:         K(a,b;p) = Σ_x e_p(a x + b x^-1),  |K| ≤ 2·√(p/mcd(a,b))
-// Uso: node kloosterman-weil.js   [N]
+// kloosterman-weil.js — ILUSTRACIÓN (no aporta resultado nuevo)
+// ------------------------------------------------------------------
+// Comprueba numéricamente la cota de Weil para sumas de Kloosterman:
+//     K(a,b;p) = Σ_{x mod p} e_p(a x + b x^{-1}) satisface |K| ≤ 2·√(p/mcd(a,b)).
+// Ese teorema es de Weil (1948) y está demostrado; este script es una
+// ILUSTRACIÓN del mismo (por eso se mantiene: muestra que la constante 2 es
+// alcanzable y que la cota es apreciable). La optimalidad de la constante 2
+// (Sato-Tate/Katz) NO se verifica aquí.
+// Uso: node kloosterman-weil.js [N]
 
 const { sieve } = require('./util.js');
 

@@ -1,0 +1,32 @@
+{
+  "name": "prime-gap-research-experimentos",
+  "version": "1.0.0",
+  "description": "Verificaciones numericas independientes del proyecto de huecos entre primos (Weil, ceros de zeta, tuplas admisibles, M_k de Maynard, error del divisor).",
+  "main": "tests.js",
+  "scripts": {
+    "test": "node tests.js",
+    "test:weil": "node kloosterman-weil.js 37",
+    "test:zeta": "node ceros-explicita.js",
+    "test:admisibles": "node util.js",
+    "test:maynard": "node maynard-mk.js 2,3 2,3,4,5,6",
+    "test:voronoi": "node voronoi.js"
+  },
+  "keywords": [
+    "prime gaps",
+    "twin primes",
+    "Maynard",
+    "Kloosterman",
+    "zeta",
+    "Lean"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "mathjs": "^15.2.0",
+    "nerdamer": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
